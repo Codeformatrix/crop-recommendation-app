@@ -43,6 +43,7 @@ if __name__ == "__main__":
     parser.add_argument("--rainfall", type=float, required=True, help="Rainfall (mm)")
 
     args = parser.parse_args()
+
     crop, confidence = predict_crop(args.N, args.P, args.K, args.temperature, args.humidity, args.ph, args.rainfall)
 
     print(f"\n🌱 Recommended Crop: {crop}")
